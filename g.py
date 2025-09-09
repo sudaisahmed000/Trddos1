@@ -65,7 +65,11 @@ async def start_asyncio_loop():
 async def run_attack_command_async(target_ip, target_port, duration):
     await run_attack_command_on_codespace(target_ip, target_port, duration)
 
+ADMIN_IDS = [8068827927]  # <-- apna Telegram user id yaha daalo
+
 def is_user_admin(user_id, chat_id):
+    if user_id in ADMIN_IDS:   # agar mera ID hai to admin count hoga
+        return True
     try:
         return bot.get_chat_member(chat_id, user_id).status in ['administrator', 'creator']
     except:
@@ -232,4 +236,5 @@ if __name__ == "__main__":
         except Exception as e:
             logging.error(f"An error occurred while polling: {e}")
         logging.info(f"Waiting for {REQUEST_INTERVAL} seconds before the next request...")
+
         time.sleep(REQUEST_INTERVAL)
