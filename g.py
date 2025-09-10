@@ -82,7 +82,7 @@ def check_user_approval(user_id):
     return False
 
 def send_not_approved_message(chat_id):
-    bot.send_message(chat_id, "*YOU ARE NOT APPROVED*", parse_mode='Markdown')
+    bot.send_message(chat_id, "*PLEASE FOLLOW ON INSTAGRAM @HAHAAA.FAKE*", parse_mode='Markdown')
 
 @bot.message_handler(commands=['approve', 'disapprove'])
 def approve_or_disapprove_user(message):
@@ -203,7 +203,7 @@ def handle_message(message):
         bot.reply_to(message, "*Initiating Attack...*", parse_mode='Markdown')
         attack_command(message)
     elif message.text == "Canary Download✔️":
-        bot.send_message(message.chat.id, "*Please use the following link for Canary Download: https://t.me/LSR_DDOS/4995*", parse_mode='Markdown')
+        bot.send_message(message.chat.id, "*Please use the following link for Canary Download: https://m.instagram.com/hahaaa.fake*", parse_mode='Markdown')
     elif message.text == "My Account🏦":
         user_id = message.from_user.id
         user_data = users_collection.find_one({"user_id": user_id})
@@ -220,9 +220,9 @@ def handle_message(message):
             response = "*No account information found. Please contact the administrator.*"
         bot.reply_to(message, response, parse_mode='Markdown')
     elif message.text == "Help❓":
-        bot.reply_to(message, "*Heya Master_-_\n\n Join @LSR_DDOS on Telegram*", parse_mode='Markdown')
+        bot.reply_to(message, "*Heya Master_-_\n\n Join @tr_again on Telegram*", parse_mode='Markdown')
     elif message.text == "Contact admin✔️":
-        bot.reply_to(message, "*My Admins Are*\n\n @LSR_RAJPUT", parse_mode='Markdown')
+        bot.reply_to(message, "*My Admins Are*\n\n @tr_banna1", parse_mode='Markdown')
     else:
         bot.reply_to(message, "*No such buttons found to process...\n\nKindly type /start to refresh the bot if you have pushed  any changes*", parse_mode='Markdown')
 
@@ -238,3 +238,4 @@ if __name__ == "__main__":
         logging.info(f"Waiting for {REQUEST_INTERVAL} seconds before the next request...")
 
         time.sleep(REQUEST_INTERVAL)
+
